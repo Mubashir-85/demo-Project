@@ -8,7 +8,7 @@ function Work() {
         </div>
 
         <div className='mt-10 flex justify-center flex-wrap gap-'>
-            <div className='h-45 w-62 text-left bg-gray-800 text-[#47bec6] border p-5'>
+            <div className='h-45 w-62 text-left bg-gray-800 text-[#36C7D2] border p-5'>
                 <h1 className='font-bold text-[25px] text-white'>Understand</h1>
                 <p>we dive into your goal, workfolw and challenges</p>
             </div>

@@ -3,9 +3,9 @@ import React from "react";
 function Navbar({ select, setSelect }) {
   return (
     <nav className=" relative items-center flex justify-center ">
-      <div className="fixed h-35 items-end flex justify-center px-8 mx-auto gap-25 mt-35 bg-black z-20 py-8">
+      <div className="fixed h-35 items-end flex justify-center px-8 mx-auto gap-25 mt-35 bg-black z-40 py-8">
         <div className="mr-20">
-          <h1 className="text-white">Logo</h1>
+          <img src="Group.svg" alt="" />
         </div>
 
         <div className="flex">
@@ -49,7 +49,7 @@ function Navbar({ select, setSelect }) {
                   select === "service" && "text-white underline"
                 } `}
               >
-                Service
+                Services 
               </a>
             </li>
 
