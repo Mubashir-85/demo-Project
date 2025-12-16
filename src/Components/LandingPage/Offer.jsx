@@ -6,21 +6,31 @@ import { FaPencilRuler } from "react-icons/fa";
 import { CiCloudOn } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 
 function Offer() {
   return (
     <div className="bg-[#0C0C0C] md:w-[100%] flex mx-auto pt-20">
       <div className=" w-[85%] md:w-[70%] mx-auto flex flex-col justify-center">
-        <div className="text-center">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 1 }}
+         className="text-center">
           <h1 className="text-[40px] text-white">What We Offer</h1>
           <p className="text-gray-300 text-sm">
             Your Australian-Based Software Development partner for designing,
             building, and scalling digital platforms built with reliabilty,
             Transparency and long term support.
           </p>
-        </div>
+        </motion.div>
         {/* Cards */}
-        <div className="mt-10  flex md:grid md:grid-cols-3 justify-center mx-auto md:justify-items-center flex-wrap gap-8 ">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 1.2, delay: 0.2 }}
+         className="mt-10  flex md:grid md:grid-cols-3 justify-center mx-auto md:justify-items-center flex-wrap gap-8 ">
           {/* 1St card */}
           <div className="relative h-60 w-64 text-left bg-[#222222] text-[#47bec6] border transition-all duration-300 ease-out transform  hover:scale-[1.02] p-4 md:p-6 translate-y-0 group  ">
             <span
@@ -135,13 +145,17 @@ function Offer() {
               Payments, logistics, CRM and business system integration.{" "}
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center mt-15 md:mt-40 flex-row ">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{opacity: 1, y:0}}
+        transition={{ duration: 1.2, delay: 0.2 }} 
+        className="flex justify-center mt-15 md:mt-40 flex-row ">
           <button className="text-[#47bec6] border px-5  rounded-2xl py-1  hover:text-[#CE014D] transition-all duration-500">
             Explore Services ⇾{" "}
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

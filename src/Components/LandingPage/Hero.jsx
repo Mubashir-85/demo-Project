@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 function Hero() {
   return (
     <>
-      <div className="md:w-[100%] w-[100%] md:mx-auto bg-[#0C0C0C] md:pt-50 pt-30">
+      <motion.div
+      initial={{ opacity: 0, y: 70 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }} 
+      className="md:w-[100%] w-[100%] md:mx-auto bg-[#0C0C0C] md:pt-50 pt-30">
         <div className="md:w-[60%] w-[85%] mx-auto flex flex-col justify-center  md:mx-auto  relative">
           <div className="items-center text-center space-y-0">
             <h1 className=" text-[#36C7D2] mx-auto text-[24px]  md:text-[48px] mb-0 leading-tight">
@@ -54,7 +60,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

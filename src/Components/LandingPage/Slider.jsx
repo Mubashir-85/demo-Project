@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const caseStudies = [
@@ -133,7 +133,7 @@ const CaseStudiesSection = () => {
           text-center relative"
       >
         {/* TITLE */}
-        <h2
+        <motion.h2
           initial={{ x: isMobile ? 100 : 1000 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -142,10 +142,10 @@ const CaseStudiesSection = () => {
             font-extrabold text-[#1b2b57] tracking-tight mb-3"
         >
           Featured <span className="text-[#007aff]">Case Studies</span>
-        </h2>
+        </motion.h2>
 
         {/* SUBTITLE */}
-        <p
+        <motion.p
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
@@ -156,7 +156,7 @@ const CaseStudiesSection = () => {
         >
           Discover how our solutions helped clients scale, innovate, and
           outperform.
-        </p>
+        </motion.p>
 
         {/* MAIN SLIDER */}
         <div
@@ -188,7 +188,7 @@ const CaseStudiesSection = () => {
           </button>
 
           {/* <AnimatePresence mode="wait" custom={direction}> */}
-          <div
+          <motion.div
             key={caseStudies[current].id}
             variants={slideVariants}
             custom={direction}
@@ -208,7 +208,7 @@ const CaseStudiesSection = () => {
     "
           >
             {/* IMAGE MOBILE */}
-            <div
+            <motion.div
               className="md:hidden flex justify-center w-full"
               animate={{ y: [0, -8, 0] }}
               transition={{
@@ -223,7 +223,7 @@ const CaseStudiesSection = () => {
                 className="w-[70%] max-w-[240px] object-contain drop-shadow-xl"
                 alt="case study"
               />
-            </div>
+            </motion.div>
 
             {/* TEXT LEFT */}
             <div className="w-full md:w-1/2 text-center md:text-left max-w-lg mx-auto md:mx-0">
@@ -269,7 +269,7 @@ const CaseStudiesSection = () => {
             </div>
 
             {/* IMAGE DESKTOP */}
-            <div
+            <motion.div
               className="hidden md:flex justify-center md:w-1/2"
               whileHover={{
                 scale: 1.04,
@@ -289,8 +289,8 @@ const CaseStudiesSection = () => {
                   ease: "easeInOut",
                 }}
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           {/* </AnimatePresence> */}
 
           {/* RIGHT ARROW (Desktop) */}
@@ -379,7 +379,7 @@ const CaseStudiesSection = () => {
 
         <div className="absolute inset-0 bg-gradient-to-b from-[#007aff]/80 via-[#0268e1]/40 to-[#012b63]/95"></div>
 
-        <div
+        <motion.div
           className="relative z-10 text-white mb-14"
           initial={{ y: 200 }}
           whileInView={{ y: 0 }}
@@ -392,17 +392,17 @@ const CaseStudiesSection = () => {
             Hear direct feedback from businesses achieving success with Compute
             Now.
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials */}
         <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 sm:gap-8 max-w-7xl mx-auto px-2 sm:px-4 justify-items-center">
           {testimonials.map((t) => (
-            <div
+            <motion.div
               initial={{ y: 200 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
             >
-              <div
+              <motion.div
                 key={t.id}
                 whileHover={{ y: -4, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 160, damping: 15 }}
@@ -451,8 +451,8 @@ const CaseStudiesSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </section>

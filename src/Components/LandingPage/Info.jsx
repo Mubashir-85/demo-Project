@@ -1,9 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Info() {
   return (
     <div className="md:w-[100%] mx-auto bg-[#f5f7fa] h-auto pt-5">
-      <div className="text-center flex flex-col">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }} 
+      className="text-center flex flex-col">
         <h1 className="text-[20px] md:text-[36px] text-[#1A4B97] font-medium leading-tight">
           Got a great idea?{" "}
           <span className="font-semibold leading-tight">
@@ -13,17 +18,25 @@ function Info() {
         <p className="text-[15px] md:text-[24px] font-normal">
           Book a free strategy call no obligations.
         </p>
-      </div>
-      <div className="mt-5 w-[80%] mx-auto flex md:flex-row flex-col md:flex justify-center md:gap-8 gap-4">
+      </motion.div>
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }} 
+      className="mt-5 w-[80%] mx-auto flex md:flex-row flex-col md:flex justify-center md:gap-8 gap-4">
         <button className="text bg-[#0882a7] hover:bg-[#1A4B97] transition-all duration-500 px-5 py-1 rounded-2xl text-white ">
           Book a 30-Minute Call
         </button>
         <button className="border-2 px-5 py-1 rounded-2xl text-[#47bec6] font-normal text-[16px]  hover:text-[#CE014D] transition-all duration-300">
           Send Project Details
         </button>
-      </div>
+      </motion.div>
 
-      <div className="text-center mt-10">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }} 
+      className="text-center mt-10">
         <h1 className="font-medium text-[20px] md:text-[36px] text-[#1A4B97]">
           We are here for you
         </h1>
@@ -99,7 +112,7 @@ function Info() {
             Send Message
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
