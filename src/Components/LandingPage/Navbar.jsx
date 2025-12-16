@@ -49,7 +49,7 @@ function Navbar({ select, setSelect }) {
               }}
               className="group relative"
             >
-              <a href="" className={`${select === "service" && "text-white"} `}>
+              <a href="" className={`hover: ${select === "service" && "text-white"} `}>
                 Services
               </a>
               <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#39BAC4] transition-all duration-300 group-hover:w-full"></span>

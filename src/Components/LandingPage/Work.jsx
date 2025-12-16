@@ -1,15 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Work() {
   return (
     <div className="md:w-[100%] bg-[#0C0C0C] mx-auto h-auto">
       <div className="w-[75%] mx-auto flex flex-col justify-center pt-15 pb-15">
-        <div className="text-center">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 1, delay: 0.2 }} 
+        className="text-center">
           <h1 className="text-white text-[36px] font-semibold">How We Work</h1>
           <p className="text-[#BBBBBB]">Build & Grow Process</p>
-        </div>
+        </motion.div>
 
-        <div className="mt-15 flex justify-center flex-wrap gap-10">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 1, delay: 0.4 }}
+         className="mt-15 flex justify-center flex-wrap gap-10">
           <div className="relative h-45 w-65 text-left bg-[#222222] text-[#47bec6] border p-6 group transition-all duration-300 transform hover:scale-[1.02]">
             <span
               className="absolute top-0 right-0 h-0 w-[2px] bg-[#47bec6]
@@ -84,13 +93,17 @@ function Work() {
               Seamless handover with stability and performance gaurantee
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center mt-10 flex-row ">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{opacity: 1, y:0}}
+        transition={{ duration: 1, delay: 0.5 }}
+         className="flex justify-center mt-10 flex-row ">
           <button className="text-[#47bec6] border px-5  rounded-2xl py-1  hover:text-[#CE014D] transition-all duration-500 ">
             Learn How We Work ⇾{" "}
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

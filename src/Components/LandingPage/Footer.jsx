@@ -7,12 +7,17 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
     <footer className="bg-[#f7f7f7] text-blue-900 w-[100%] md:w-[100%] mx-auto pt-5">
       {/* Top Contact Bar */}
-      <div className="w-[80%] mx-auto justify-start items-start md:mx-auto px-6 py-6 flex flex-col md:flex-row  md:justify-between md:items-center text-sm gap-[7px] md:gap-[15px]">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }}
+       className="w-[80%] mx-auto justify-start items-start md:mx-auto px-6 py-6 flex flex-col md:flex-row  md:justify-between md:items-center text-sm gap-[7px] md:gap-[15px]">
         <div className="flex items-center gap-2 text-[15px]">
           <FaPhoneAlt />
           <span>(555) 123-4567</span>
@@ -27,12 +32,16 @@ export default function Footer() {
           <FaMapMarkerAlt />
           <span>123 Compute Now, IT Park City, USA 123</span>
         </div>
-      </div>
+      </motion.div>
 
       <hr className="border-blue-700 w-[90%] mx-auto" />
 
       {/* Main Footer Content */}
-      <div className="w-[80%] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-20">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }}
+       className="w-[80%] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-20">
         {/* Left Section */}
         <div className="md:w-[80%] md:mx-auto">
           <img src="Group.svg" alt="Compute Now" className="mb-6 w-20" />
@@ -75,14 +84,18 @@ export default function Footer() {
             <li>Cloud & DevOps</li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       <hr className="border-blue-700 w-[90%] mx-auto" />
 
       {/* Bottom Copyright */}
-      <div className="text-center py-6 text-cyan-500 text-sm pb-10">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y:0}}
+      transition={{ duration: 1 }}
+       className="text-center py-6 text-cyan-500 text-sm pb-10">
         © 2025 computenow. All rights reserved.
-      </div>
+      </motion.div>
     </footer>
   );
 }
